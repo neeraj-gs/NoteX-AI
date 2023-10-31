@@ -8,3 +8,5 @@ export const $notes = pgTable('notes',{
     userId: text('user_id').notNull(), //this user id comes from the clerk userid
     editorState: text('editor_state')
 })
+
+export type NoteType = typeof $notes.$inferSelect;
