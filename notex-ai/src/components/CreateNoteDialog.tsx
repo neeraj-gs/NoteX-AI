@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import { Dialog, DialogTrigger } from './ui/dialog'
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from './ui/dialog'
 import { Plus } from 'lucide-react'
 
 type Props = {}
@@ -14,6 +14,15 @@ const CreateNoteDialog = (props: Props) => {
                 <h2 className='font-semibold text-green-600 sm:mt-2'>Create New NoteBook</h2>
             </div>
         </DialogTrigger>
+        <DialogContent>
+            <DialogHeader>
+                <DialogTitle>Create New Note Book</DialogTitle>
+                <DialogDescription>You can Create notebook by clicking the buton Below</DialogDescription>
+            </DialogHeader>
+            <form>
+                <div className="h-4"></div>
+            </form>
+        </DialogContent>
     </Dialog>
   )
 }
