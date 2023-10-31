@@ -24,4 +24,4 @@ Tech Stack
     7. Firebase Storage - Save All the Fiels [SO taht we can access the URL to get the notes]
     8. Tip Tap  Note Editor - To create a Full fleged interactions in the Editing of Notes
     9. Vercel AI SDK - Helps COnnect out frontend to the AI Backend
-    
+    10.TypeScript
