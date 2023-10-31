@@ -10,3 +10,4 @@ export const $notes = pgTable('notes',{
 })
 
 export type NoteType = typeof $notes.$inferSelect;
+//drizzle kit helps us migratee cahnges to the databar also gives  astudio to view databse and more
