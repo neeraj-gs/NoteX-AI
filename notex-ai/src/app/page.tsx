@@ -1,3 +1,4 @@
+import TypeWriterTitle from '@/components/TypeWriterTitle'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 
@@ -13,7 +14,9 @@ export default function Home() {
         <div className="mt-4"></div>
 
         {/* //typewriter */}
-        <h3 className='font-semibold text-3xl text-center text-slate-700'>AI Integrated</h3>
+        <h3 className='font-semibold text-3xl text-center text-slate-700'>
+          <TypeWriterTitle />
+        </h3>
       </div>
     </div>
   )
