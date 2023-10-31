@@ -18,3 +18,6 @@ const Provider = ({children}:Props) => {
 }
 
 export default Provider
+
+//reson: Fetch all notes and to reduce hitting the end point twice , if teh request is reuseing the same as first query
+//storing result in cache , so we store this resutl in a cache adn tehn use this instead of hitting the end point
