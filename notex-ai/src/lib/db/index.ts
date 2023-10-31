@@ -10,3 +10,4 @@ if(!process.env.DATABASE_URL){
 const sql = neon(process.env.DATABASE_URL)
 
 export const db = drizzle(sql);
+//now we can use drizllr to get the data or send the data
