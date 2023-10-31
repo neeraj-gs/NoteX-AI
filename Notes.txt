@@ -1,0 +1,27 @@
+NoteX-AI 
+
+    This is a Notion + AI clone
+    When YOur Note taing is INtegrated with AI 
+
+Clerk Authentication
+Open AI DALL-E API to convert text to image for the NoteBook image
+
+    Can Type Notes, With all text decoration activities and interactions are presetn 
+    It is Integrated with AI Autocomplete based on the previous sentences 
+
+    AI Completes the Notes and Texts For you.
+    This Helps increase Productivity , Manage TOdos
+
+Can be used as a Daily Editor , also has a auto save feature
+
+Tech Stack 
+    1. Nextjs13 - 
+    2. DALL - E API - TO convert text to image.
+    3. Neon DB - Serverless PostGresQL database
+    4. TailwindCSS + ShadCN 
+    5. Vercel Edge runtime - Allows API to run 5 sec normally , we need to  use edge run time as DALL e takes time to create image [Allows us to run the function for much longer and faster]
+    6. DrizzleORM - TS ORM , allows interacting with SQL Databases
+    7. Firebase Storage - Save All the Fiels [SO taht we can access the URL to get the notes]
+    8. Tip Tap  Note Editor - To create a Full fleged interactions in the Editing of Notes
+    9. Vercel AI SDK - Helps COnnect out frontend to the AI Backend
+    
