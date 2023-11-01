@@ -46,7 +46,12 @@ const NotebookPage = async ({params:{noteId}}: Props) => {
                 </span>
                 <span className='inline-block mx-1'>/</span>
                 <span className='text-stone-500 font-semibold'>{note.name}</span>
+                <div className="ml-auto">DELETE</div>
             </div>
+
+            <div className="h-4"></div>
+            <div className='border-stone-200 shadow-xl rounded-lg px-16 py-8 w-full '></div>
+            {/* Editor with all auto functionalities */}
         </div>
     </div>
   )
