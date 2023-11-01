@@ -1,9 +1,10 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {EditorContent, useEditor} from '@tiptap/react'
 import {StarterKit} from '@tiptap/starter-kit'
 import TipTapMenuBar from './TipTapMenuBar'
 import { Button } from './ui/button'
+import { useDebounce } from '@/lib/useDebounce'
 
 type Props = {}
 
@@ -19,6 +20,14 @@ const TipTapEditor = (props: Props) => {
             setEditorState(editor.getHTML()) //allows to get back html and bind it ot the state
         }
     })
+
+    const debouncedEditorState = useDebounce(editorState,500)
+
+    useEffect(()=>{
+        //save to db
+        
+        console.log(debouncedEditorState)
+    },[debouncedEditorState])
   return (
     <>
         <div className='flex'>
