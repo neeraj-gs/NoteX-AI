@@ -6,10 +6,12 @@ import { Input } from './ui/input'
 import { Button } from './ui/button'
 import { useMutation } from '@tanstack/react-query'
 import axios from 'axios'
+import { useRouter } from 'next/navigation'
 
 type Props = {}
 
 const CreateNoteDialog = (props: Props) => {
+    const router = useRouter()
     const [input,setInput] = React.useState('')
     const createNotebook = useMutation({
         mutationFn: async () => {
@@ -32,10 +34,12 @@ const CreateNoteDialog = (props: Props) => {
             onSuccess: ({note_id}) => {
                 console.log('Note Created')
                 console.log('Created a new Note',note_id)
+                router.push(`/notebook/${note_id}`)
                 // setInput('')
             },
             onError: (error) => {
                 console.log(error)
+                window.alert('Failed to create a new Note')
             }
         })
     }
