@@ -28,7 +28,7 @@ const TipTapEditor = (props: Props) => {
             <Button>Saved</Button>
         </div>
 
-        <div>
+        <div className='prose'>
             <EditorContent editor={editor} />
         </div>
     </>
