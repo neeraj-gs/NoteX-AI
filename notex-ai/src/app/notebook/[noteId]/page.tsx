@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button'
+import { clerk } from '@/lib/clerk-server'
 import { db } from '@/lib/db'
 import { $notes } from '@/lib/db/schema'
 import { auth } from '@clerk/nextjs'
@@ -19,6 +20,7 @@ const NotebookPage = async ({params:{noteId}}: Props) => {
     if(!userId){
         return redirect('/dashboard')
     }
+    const user = await clerk.users.getUser(userId)
     const notes = await db
     .select()
     .from($notes)
@@ -38,6 +40,12 @@ const NotebookPage = async ({params:{noteId}}: Props) => {
                 <Link href='/dashboard'>
                     <Button className='bg-green-600' size='sm'><ArrowLeft /> Back</Button>
                 </Link>
+                <div className="w-4"></div>
+                <span className='font-semibold'>
+                    {user.firstName} {user.lastName}
+                </span>
+                <span className='inline-block mx-1'>/</span>
+                <span className='text-stone-500 font-semibold'>{note.name}</span>
             </div>
         </div>
     </div>
