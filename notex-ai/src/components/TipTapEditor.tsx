@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react'
 import {EditorContent, useEditor} from '@tiptap/react'
 import {StarterKit} from '@tiptap/starter-kit'
@@ -25,7 +26,7 @@ const TipTapEditor = (props: Props) => {
                 <TipTapMenuBar editor={editor} />
             )}
             
-            <Button>Saved</Button>
+            <Button className='ml-4'>Saved</Button>
         </div>
 
         <div className='prose'>
