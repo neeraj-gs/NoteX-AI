@@ -25,8 +25,8 @@ export async function  generateImagePrompt(name:string){
             }]
         })
         const data = await response.json();
-        const image_description = data.choices[0].message.content;
-        return image_description as string;
+        // const image_description = data.choices[0].message.content;
+        // return image_description as string;
         
     }catch(error){
         console.log(error);

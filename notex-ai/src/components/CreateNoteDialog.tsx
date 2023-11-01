@@ -29,9 +29,10 @@ const CreateNoteDialog = (props: Props) => {
             return
         }
         createNotebook.mutate(undefined,{
-            onSuccess: () => {
+            onSuccess: ({note_id}) => {
                 console.log('Note Created')
-                setInput('')
+                console.log('Created a new Note',note_id)
+                // setInput('')
             },
             onError: (error) => {
                 console.log(error)
