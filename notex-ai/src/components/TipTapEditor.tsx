@@ -8,6 +8,7 @@ import { useDebounce } from '@/lib/useDebounce'
 import { useMutation } from '@tanstack/react-query'
 import axios from 'axios'
 import { NoteType } from '@/lib/db/schema'
+import Text from '@tiptap/extension-text'
 
 type Props = {note:NoteType}
 
@@ -20,6 +21,16 @@ const TipTapEditor = ({note}: Props) => {
                 editorState
            })
            return response.data
+        }
+    })
+    const customText = Text.extend({
+        addKeyboardShortcuts(){
+            return {
+                'Shift-a': () => {
+                    console.log('Shift-a ai is triggered')
+                    return true;
+                }
+            }
         }
     })
     const editor = useEditor({
