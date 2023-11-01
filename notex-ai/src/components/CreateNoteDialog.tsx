@@ -13,7 +13,7 @@ const CreateNoteDialog = (props: Props) => {
     const [input,setInput] = React.useState('')
     const createNotebook = useMutation({
         mutationFn: async () => {
-            const response = await axios.post('/api/createNotebook',{
+            const response = await axios.post('/api/createNoteBook',{
                 name:input
             })
             return response.data
@@ -22,7 +22,7 @@ const CreateNoteDialog = (props: Props) => {
     }) //it is a function that hits an end point
     
     
-    const handleSubmit = (e:React.FormEvent<HTMLFormElement>) =>{
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) =>{
         e.preventDefault();
         if(input === ''){
             window.alert('Please entera name')
