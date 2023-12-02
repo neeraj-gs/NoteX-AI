@@ -31,7 +31,13 @@ An Online Note Editor, that allows you to write notes , with diffrent font styli
 
 ### Screenshots
 
-![App Screenshot]()
+![App Screenshot](./notex-ai/public/1.png)
+
+![App Screenshot](./notex-ai/public/2.png)
+
+![App Screenshot](./notex-ai/public/3.png)
+
+![App Screenshot](./notex-ai/public/4.png)
 
 
 ### Deployment
